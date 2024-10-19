@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import bgImg from "../../assets/sky.jpg";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -44,7 +46,7 @@ const Signup = () => {
         setSuccessMessage("User registered successfully!");
         setErrorMessage("");
         setUser({ username: "", email: "", password: "", confirmPassword: "" });
-        window.location.href = "/";
+        navigate("/");
       } else {
         setErrorMessage(response.data.message);
       }
@@ -136,7 +138,7 @@ const Signup = () => {
           </form>
           <p className="mt-4 text-center text-sm text-gray-600">
             Already have an account?{" "}
-            <a href="/" className="text-blue-500 hover:underline">
+            <a onClick={() => navigate("/")} className="text-blue-500 hover:underline cursor-pointer">
               Sign in
             </a>
           </p>
