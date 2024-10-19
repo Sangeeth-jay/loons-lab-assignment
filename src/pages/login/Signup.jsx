@@ -34,7 +34,7 @@ const Signup = () => {
 
   const registerUser = async () => {
     try {
-      const response = await axios.post("http://localhost:3002/users/adduser", {
+      const response = await axios.post("https://centralize-user-management.vercel.app/users/adduser", {
         name: user.username,
         email: user.email,
         password: user.password,

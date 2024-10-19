@@ -15,7 +15,7 @@ const Signin = () => {
   // Authenticate
   const authenticateUser = async (email, password) => {
     try {
-      const response = await axios.post("http://localhost:3002/users/login", {
+      const response = await axios.post("https://centralize-user-management.vercel.app/users/login", {
         email,
         password,
       });
