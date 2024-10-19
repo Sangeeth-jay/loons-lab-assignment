@@ -64,7 +64,7 @@ const Signup = () => {
           backgroundImage: `url(${bgImg})`,
         }}
       >
-        <div className="bg-white opacity-95 p-8 rounded-lg shadow-md w-96">
+        <div className="bg-white opacity-95 p-8 rounded-lg shadow-md md:w-96 w-11/12">
           <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
